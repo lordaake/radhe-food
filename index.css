@@ -1,0 +1,323 @@
+@import url('https://fonts.cdnfonts.com/css/smythe');
+
+body {
+    margin: 0;
+    font-family: 'Smythe', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background-image: url('/images/kitchen3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.headings-header {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    border-radius: 50px;
+    border: 1px solid #FFF;
+    color: #FFD37D;
+    font-size: 22.422px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13.798px;
+    padding-left: 20px;
+}
+
+.food-items {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    /* Added padding for better spacing */
+}
+
+.item-container {
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    gap: 10px;
+}
+
+.food {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.food>* {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3vh;
+}
+
+.food-img {
+    max-width: 200px;
+    border-radius: 2%;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.cross {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cross:hover {
+    cursor: pointer;
+}
+
+/* Style the SVG elements */
+.cross svg {
+    width: 50px;
+    height: 50px;
+}
+
+.cross circle {
+    stroke: #bdbfbe;
+    stroke-width: 1.5;
+}
+
+.cross line {
+    stroke: #787575;
+    stroke-width: 1.5;
+}
+
+.cross:hover circle,
+.cross:hover line {
+    stroke: #000000;
+    cursor: pointer;
+}
+
+.order-div {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+
+.cart-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.cart-item {
+    display: contents;
+}
+
+.item-name {
+    grid-column: 1;
+}
+
+.item-price {
+    grid-column: 3;
+    text-align: right;
+}
+
+.remove-btn {
+    grid-column: 2;
+    color: red;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+}
+
+.total-price-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.total-price {
+    margin-left: 2vh;
+}
+
+.total-h3 {
+    align-self: flex-start;
+}
+
+.order-div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.order-h3 {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.order-successful-h3 {
+    margin: 0 auto;
+    padding-bottom: 5vh;
+}
+
+.complete-order-btn {
+    margin: 0 auto;
+    width: 50%;
+    padding: 15px;
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.pay-modal {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    width: 524px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.pay-order-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.pay-order-btn:hover {
+    background-color: #218838;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .headings-header {
+        width: 80%;
+        height: auto;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .food-items {
+        padding: 10px;
+    }
+
+    .item-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .food {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .food-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .cart-items {
+        grid-template-columns: 1fr;
+    }
+
+    .complete-order-btn {
+        width: 80%;
+    }
+
+    .pay-modal {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .close-btn {
+        font-size: 24px;
+    }
+}
+
+/* Medium devices (tablets, 600px to 768px) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .headings-header {
+        width: 70%;
+        height: auto;
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 30px;
+    }
+
+    .item-container {
+        grid-template-columns: auto 1fr;
+    }
+
+    .food-img {
+        max-width: 150px;
+    }
+
+    .complete-order-btn {
+        width: 60%;
+    }
+
+    .pay-modal {
+        width: 80%;
+    }
+}
+
+/* Large devices (desktops, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .item-container {
+        grid-template-columns: auto 1fr 1fr;
+    }
+}
